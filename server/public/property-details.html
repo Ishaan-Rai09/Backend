@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modern Villa - LuxuryHomes</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="container header-container">
+      <a href="index.html" class="logo">LuxuryHomes</a>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="properties.html">Properties</a>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="auth-links" style="display: flex; gap: 15px;">
+        <a href="login.html" class="btn">Login</a>
+        <a href="register.html" class="btn btn-secondary">Register</a>
+      </div>
+      <div class="user-profile" style="display: none; align-items: center; gap: 10px;">
+        <span class="user-name"></span>
+        <button id="logout-btn" class="btn btn-secondary">Logout</button>
+      </div>
+      <div class="mobile-menu">
+        <i class="fas fa-bars"></i>
+      </div>
+    </div>
+  </header>
+
+  <!-- Property Details Section -->
+  <section class="property-details-section">
+    <div class="container">
+      <div class="property-header">
+        <h1 class="property-title">Modern Villa in Beverly Hills</h1>
+        <p class="property-address"><i class="fas fa-map-marker-alt"></i> 123 Luxury Lane, Beverly Hills, CA 90210</p>
+        <p class="property-price-large">$1,500,000</p>
+      </div>
+      
+      <div class="property-gallery">
+        <img src="modern villa 2.jpg" alt="Modern Villa" class="main-image">
+        <div class="thumbnail-grid">
+          <img src="modern villa 2.jpg" alt="Modern Villa" class="thumbnail active">
+          <img src="1.jpeg" alt="Living Room" class="thumbnail">
+          <img src="2.jpeg" alt="Kitchen" class="thumbnail">
+          <img src="3.jpeg" alt="Bedroom" class="thumbnail">
+          <img src="4.jpeg" alt="Bathroom" class="thumbnail">
+        </div>
+      </div>
+      
+      <div class="property-content">
+        <div class="property-main">
+          <div class="property-description">
+            <h2>Property Description</h2>
+            <p>This stunning modern villa is located in the prestigious Beverly Hills neighborhood. The property offers luxurious living spaces with high-end finishes and state-of-the-art amenities.</p>
+            <p>The open floor plan features floor-to-ceiling windows that flood the space with natural light and provide breathtaking views of the surrounding landscape. The gourmet kitchen is equipped with top-of-the-line appliances and custom cabinetry.</p>
+            <p>The primary suite is a true retreat with a spa-like bathroom and a private balcony. Additional bedrooms are spacious and well-appointed, perfect for family or guests.</p>
+            <p>Outdoor living is enhanced by a beautifully landscaped garden, a swimming pool, and a covered patio ideal for entertaining. The property also includes a two-car garage and smart home technology throughout.</p>
+          </div>
+          
+          <div class="property-features">
+            <h2>Property Features</h2>
+            <div class="property-features-list">
+              <div class="feature-item">
+                <i class="fas fa-bed"></i>
+                <span>4 Bedrooms</span>
+              </div>
+              <div class="feature-item">
+                <i class="fas fa-bath"></i>
+                <span>3.5 Bathrooms</span>
+              </div>
+              <div class="feature-item">
+                <i class="fas fa-ruler-combined"></i>
+                <span>3,500 sq ft</span>
+              </div>
+              <div class="feature-item">
+                <i class="fas fa-car"></i>
+                <span>2 Garage Spaces</span>
+              </div>
+              <div class="feature-item">
+                <i class="fas fa-swimming-pool"></i>
+                <span>Swimming Pool</span>
+              </div>
+              <div class="feature-item">
+                <i class="fas fa-tree"></i>
+                <span>Garden</span>
+              </div>
+              <div class="feature-item">
+                <i class="fas fa-calendar"></i>
+                <span>Built in 2020</span>
+              </div>
+              <div class="feature-item">
+                <i class="fas fa-temperature-low"></i>
+                <span>Central AC</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="property-location">
+            <h2>Location</h2>
+            <div class="map-container" style="height: 400px; background-color: #eee; margin-top: 20px; display: flex; justify-content: center; align-items: center;">
+              <p>Map will be displayed here</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="property-sidebar">
+          <div class="agent-info">
+            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Agent">
+            <div>
+              <h3>John Smith</h3>
+              <p>Luxury Property Specialist</p>
+            </div>
+          </div>
+          
+          <div class="contact-form">
+            <h3>Contact Agent</h3>
+            <form>
+              <div class="form-group">
+                <input type="text" placeholder="Your Name" required>
+              </div>
+              <div class="form-group">
+                <input type="email" placeholder="Your Email" required>
+              </div>
+              <div class="form-group">
+                <input type="tel" placeholder="Your Phone">
+              </div>
+              <div class="form-group">
+                <textarea placeholder="Your Message" required>I'm interested in this property. Please contact me with more information.</textarea>
+              </div>
+              <button type="submit" class="btn" style="width: 100%;">Send Message</button>
+            </form>
+          </div>
+          
+          <div class="property-actions" style="margin-top: 20px; display: flex; flex-direction: column; gap: 10px;">
+            <button class="btn" style="width: 100%;"><i class="fas fa-calendar-alt"></i> Schedule a Viewing</button>
+            <button class="btn btn-secondary" style="width: 100%;"><i class="fas fa-heart"></i> Save to Favorites</button>
+            <button class="btn" style="width: 100%;"><i class="fas fa-share-alt"></i> Share Property</button>
+          </div>
+        </div>
+      </div>
+      
+      <div class="similar-properties" style="margin-top: 60px;">
+        <h2 class="section-title">Similar Properties</h2>
+        <div class="properties-grid">
+          <div class="property-card">
+            <img src="Luxury Mansion.jpeg" alt="Luxury Mansion">
+            <div class="property-details">
+              <h3>Luxury Mansion</h3>
+              <div class="property-info">
+                <p class="property-price">$2,300,000</p>
+                <p>Beverly Hills</p>
+              </div>
+              <div class="property-features">
+                <div class="feature"><i class="fas fa-bed"></i> 5</div>
+                <div class="feature"><i class="fas fa-bath"></i> 4</div>
+                <div class="feature"><i class="fas fa-ruler-combined"></i> 4,200 sq ft</div>
+              </div>
+              <a href="property-details.html" class="btn" style="width: 100%;">View Details</a>
+            </div>
+          </div>
+          
+          <div class="property-card">
+            <img src="Luxury City Apartment.jpeg" alt="Luxury Apartment">
+            <div class="property-details">
+              <h3>Luxury Apartment</h3>
+              <div class="property-info">
+                <p class="property-price">$1,200,000</p>
+                <p>Downtown LA</p>
+              </div>
+              <div class="property-features">
+                <div class="feature"><i class="fas fa-bed"></i> 3</div>
+                <div class="feature"><i class="fas fa-bath"></i> 2</div>
+                <div class="feature"><i class="fas fa-ruler-combined"></i> 2,100 sq ft</div>
+              </div>
+              <a href="property-details.html" class="btn" style="width: 100%;">View Details</a>
+            </div>
+          </div>
+          
+          <div class="property-card">
+            <img src="Beachfront Condo in Miami.jpeg" alt="Beachfront Condo">
+            <div class="property-details">
+              <h3>Beachfront Condo</h3>
+              <div class="property-info">
+                <p class="property-price">$1,800,000</p>
+                <p>Malibu</p>
+              </div>
+              <div class="property-features">
+                <div class="feature"><i class="fas fa-bed"></i> 3</div>
+                <div class="feature"><i class="fas fa-bath"></i> 3</div>
+                <div class="feature"><i class="fas fa-ruler-combined"></i> 2,800 sq ft</div>
+              </div>
+              <a href="property-details.html" class="btn" style="width: 100%;">View Details</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-container">
+        <div class="footer-column">
+          <h3>LuxuryHomes</h3>
+          <p>Your premier destination for luxury real estate worldwide. Find your dream property with our expert guidance.</p>
+        </div>
+        
+        <div class="footer-column">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="properties.html">Properties</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-column">
+          <h3>Contact Us</h3>
+          <ul>
+            <li><i class="fas fa-map-marker-alt"></i> 123 Luxury Lane, Beverly Hills</li>
+            <li><i class="fas fa-phone"></i> +1 (123) 456-7890</li>
+            <li><i class="fas fa-envelope"></i> info@luxuryhomes.com</li>
+          </ul>
+        </div>
+        
+        <div class="footer-column">
+          <h3>Follow Us</h3>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2025 LuxuryHomes | <a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms of Service</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html> 

@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us - LuxuryHomes</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    .about-hero {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('Luxury Mansion.jpeg');
+      height: 40vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+    }
+    
+    .about-hero h1 {
+      font-size: 48px;
+      margin-bottom: 10px;
+    }
+    
+    .about-content-section {
+      padding: 60px 0;
+      background-color: var(--light-color);
+    }
+    
+    .about-content-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: center;
+      margin-bottom: 60px;
+    }
+    
+    .about-content-container img {
+      width: 100%;
+      border-radius: 8px;
+      box-shadow: var(--shadow);
+    }
+    
+    .about-content-container h2 {
+      color: var(--primary-color);
+      margin-bottom: 20px;
+    }
+    
+    .about-content-container p {
+      margin-bottom: 15px;
+    }
+    
+    .values-section {
+      padding: 60px 0;
+      background-color: var(--primary-color);
+      color: var(--white-color);
+    }
+    
+    .values-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      margin-top: 40px;
+    }
+    
+    .value-card {
+      text-align: center;
+      padding: 30px;
+      background-color: rgba(255, 255, 255, 0.1);
+      border-radius: 8px;
+      transition: var(--transition);
+    }
+    
+    .value-card:hover {
+      transform: translateY(-10px);
+      background-color: rgba(255, 255, 255, 0.2);
+    }
+    
+    .value-card i {
+      font-size: 40px;
+      color: var(--secondary-color);
+      margin-bottom: 20px;
+    }
+    
+    .value-card h3 {
+      margin-bottom: 15px;
+    }
+    
+    .team-section {
+      padding: 60px 0;
+      background-color: var(--light-color);
+    }
+    
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      margin-top: 40px;
+    }
+    
+    .team-card {
+      background-color: var(--white-color);
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      transition: var(--transition);
+    }
+    
+    .team-card:hover {
+      transform: translateY(-10px);
+    }
+    
+    .team-card img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+    }
+    
+    .team-info {
+      padding: 20px;
+      text-align: center;
+    }
+    
+    .team-info h3 {
+      color: var(--primary-color);
+      margin-bottom: 5px;
+    }
+    
+    .team-info p {
+      color: #666;
+      margin-bottom: 15px;
+    }
+    
+    .team-social {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+    }
+    
+    .team-social a {
+      display: inline-block;
+      width: 36px;
+      height: 36px;
+      background-color: var(--primary-color);
+      color: var(--white-color);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: var(--transition);
+    }
+    
+    .team-social a:hover {
+      background-color: var(--secondary-color);
+      color: var(--primary-color);
+    }
+    
+    @media (max-width: 768px) {
+      .about-content-container {
+        grid-template-columns: 1fr;
+      }
+      
+      .about-content-container:nth-child(even) {
+        flex-direction: column-reverse;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="container header-container">
+      <a href="index.html" class="logo">LuxuryHomes</a>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="properties.html">Properties</a>
+        <a href="about.html" class="active">About Us</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="auth-links" style="display: flex; gap: 15px;">
+        <a href="login.html" class="btn">Login</a>
+        <a href="register.html" class="btn btn-secondary">Register</a>
+      </div>
+      <div class="user-profile" style="display: none; align-items: center; gap: 10px;">
+        <span class="user-name"></span>
+        <button id="logout-btn" class="btn btn-secondary">Logout</button>
+      </div>
+      <div class="mobile-menu">
+        <i class="fas fa-bars"></i>
+      </div>
+    </div>
+  </header>
+
+  <!-- About Hero -->
+  <section class="about-hero">
+    <div class="container">
+      <h1>About LuxuryHomes</h1>
+      <p>Your Premier Destination for Luxury Real Estate</p>
+    </div>
+  </section>
+
+  <!-- About Content -->
+  <section class="about-content-section">
+    <div class="container">
+      <div class="about-content-container">
+        <div>
+          <h2>Our Story</h2>
+          <p>Founded in 2010, LuxuryHomes has established itself as a leader in the luxury real estate market. What began as a small team of passionate real estate professionals has grown into a global network of experts dedicated to connecting discerning clients with exceptional properties.</p>
+          <p>Our journey started with a simple vision: to transform the luxury real estate experience by combining unparalleled market knowledge with personalized service. Today, we continue to uphold this vision, setting new standards in the industry and creating lasting relationships with our clients.</p>
+          <p>With offices in major cities around the world and a portfolio of the most prestigious properties, LuxuryHomes has become synonymous with excellence in luxury real estate.</p>
+        </div>
+        <img src="Luxury Villa in Beverly Hills.jpeg" alt="Luxury Villa">
+      </div>
+      
+      <div class="about-content-container">
+        <img src="Luxury Penthouse in San Francisco.jpeg" alt="Luxury Penthouse">
+        <div>
+          <h2>Our Mission</h2>
+          <p>At LuxuryHomes, our mission is to provide an exceptional real estate experience for our clients, whether they are buying, selling, or renting luxury properties. We are committed to understanding our clients' unique needs and preferences, and to delivering personalized solutions that exceed their expectations.</p>
+          <p>We believe that finding the perfect property is about more than just location and amenities—it's about finding a home that reflects your lifestyle and aspirations. Our team of experts is dedicated to guiding you through every step of your real estate journey, ensuring a seamless and rewarding experience.</p>
+          <p>Through innovation, integrity, and a deep understanding of the luxury market, we strive to be the most trusted name in luxury real estate.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Our Values -->
+  <section class="values-section">
+    <div class="container">
+      <h2 class="section-title" style="color: var(--white-color);">Our Core Values</h2>
+      <div class="values-grid">
+        <div class="value-card">
+          <i class="fas fa-handshake"></i>
+          <h3>Integrity</h3>
+          <p>We conduct our business with the highest ethical standards, ensuring transparency and honesty in every interaction.</p>
+        </div>
+        
+        <div class="value-card">
+          <i class="fas fa-star"></i>
+          <h3>Excellence</h3>
+          <p>We are committed to delivering exceptional service and results, continuously raising the bar in everything we do.</p>
+        </div>
+        
+        <div class="value-card">
+          <i class="fas fa-users"></i>
+          <h3>Client-Focused</h3>
+          <p>Our clients are at the heart of our business. We listen, understand, and tailor our services to meet their unique needs.</p>
+        </div>
+        
+        <div class="value-card">
+          <i class="fas fa-lightbulb"></i>
+          <h3>Innovation</h3>
+          <p>We embrace new technologies and approaches to provide cutting-edge solutions for our clients.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Our Team -->
+  <section class="team-section">
+    <div class="container">
+      <h2 class="section-title">Meet Our Team</h2>
+      <div class="team-grid">
+        <div class="team-card">
+          <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Team Member">
+          <div class="team-info">
+            <h3>John Smith</h3>
+            <p>CEO & Founder</p>
+            <p>With over 20 years of experience in luxury real estate, John leads our team with vision and expertise.</p>
+            <div class="team-social">
+              <a href="#"><i class="fab fa-linkedin-in"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="team-card">
+          <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Team Member">
+          <div class="team-info">
+            <h3>Sarah Johnson</h3>
+            <p>Chief Operating Officer</p>
+            <p>Sarah oversees our day-to-day operations, ensuring that we deliver exceptional service to every client.</p>
+            <div class="team-social">
+              <a href="#"><i class="fab fa-linkedin-in"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="team-card">
+          <img src="https://randomuser.me/api/portraits/men/67.jpg" alt="Team Member">
+          <div class="team-info">
+            <h3>Michael Chen</h3>
+            <p>Head of International Sales</p>
+            <p>Michael specializes in connecting international clients with luxury properties around the world.</p>
+            <div class="team-social">
+              <a href="#"><i class="fab fa-linkedin-in"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="team-card">
+          <img src="https://randomuser.me/api/portraits/women/28.jpg" alt="Team Member">
+          <div class="team-info">
+            <h3>Emily Davis</h3>
+            <p>Marketing Director</p>
+            <p>Emily leads our marketing efforts, showcasing our properties to the right audience with innovative strategies.</p>
+            <div class="team-social">
+              <a href="#"><i class="fab fa-linkedin-in"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to Action -->
+  <section style="background-color: var(--primary-color); padding: 60px 0; text-align: center; color: var(--white-color);">
+    <div class="container">
+      <h2>Ready to Work With Us?</h2>
+      <p style="margin-bottom: 30px;">Let our team of experts help you find your dream property or sell your luxury home.</p>
+      <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
+        <a href="properties.html" class="btn btn-secondary">Browse Properties</a>
+        <a href="contact.html" class="btn">Contact Us</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-container">
+        <div class="footer-column">
+          <h3>LuxuryHomes</h3>
+          <p>Your premier destination for luxury real estate worldwide. Find your dream property with our expert guidance.</p>
+        </div>
+        
+        <div class="footer-column">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="properties.html">Properties</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-column">
+          <h3>Contact Us</h3>
+          <ul>
+            <li><i class="fas fa-map-marker-alt"></i> 123 Luxury Lane, Beverly Hills</li>
+            <li><i class="fas fa-phone"></i> +1 (123) 456-7890</li>
+            <li><i class="fas fa-envelope"></i> info@luxuryhomes.com</li>
+          </ul>
+        </div>
+        
+        <div class="footer-column">
+          <h3>Follow Us</h3>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2025 LuxuryHomes | <a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms of Service</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

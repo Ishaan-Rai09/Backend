@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LuxuryHomes - Premium Real Estate</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="container header-container">
+      <a href="/" class="logo">LuxuryHomes</a>
+      <nav>
+        <a href="/" class="active">Home</a>
+        <a href="/properties.html">Properties</a>
+        <a href="/about.html">About Us</a>
+        <a href="/contact.html">Contact</a>
+      </nav>
+      <div class="auth-links">
+        <a href="/login.html" class="btn">Login</a>
+        <a href="/register.html" class="btn btn-secondary">Register</a>
+      </div>
+      <div class="user-profile" style="display: none;">
+        <span class="user-name"></span>
+        <div class="user-dropdown">
+          <a href="/profile.html"><i class="fas fa-user"></i> My Profile</a>
+          <a href="/clear-credentials.html"><i class="fas fa-shield-alt"></i> Clear Credentials</a>
+          <button id="logout-btn" class="btn btn-secondary">Logout</button>
+        </div>
+      </div>
+      <div class="mobile-menu">
+        <i class="fas fa-bars"></i>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Find Your Dream Luxury Home</h1>
+      <p>Discover the finest properties in the most prestigious locations</p>
+      <a href="/properties.html" class="btn btn-primary">Explore Listings</a>
+    </div>
+  </section>
+
+  <!-- Property Search -->
+  <section class="search-bar">
+    <div class="container">
+      <form id="property-search-form" action="/properties.html" method="GET">
+        <div class="search-inputs">
+          <div class="search-input">
+            <i class="fas fa-search"></i>
+            <input type="text" name="location" placeholder="Enter location or keyword">
+          </div>
+          <div class="search-select">
+            <select name="status" aria-label="Property Status">
+              <option value="">All Properties</option>
+              <option value="For Sale">For Sale</option>
+              <option value="For Rent">For Rent</option>
+            </select>
+          </div>
+          <button type="submit" class="btn btn-primary">Search</button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- Featured Properties -->
+  <section class="featured-properties">
+    <div class="container">
+      <h2 class="section-title">Featured Properties</h2>
+      <div class="property-grid" id="featured-properties">
+        <!-- Properties will be loaded dynamically via JavaScript -->
+        <div class="property-loading">
+          <i class="fas fa-spinner fa-spin"></i>
+          <p>Loading properties...</p>
+        </div>
+      </div>
+      <div class="view-all-container">
+        <a href="/properties.html" class="btn btn-secondary">View All Properties</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="about-section">
+    <div class="container">
+      <div class="about-content">
+        <div class="about-text">
+          <h2>About LuxuryHomes</h2>
+          <p>LuxuryHomes is a premier real estate agency specializing in high-end properties across the globe. With over 15 years of experience, we have established ourselves as leaders in the luxury real estate market.</p>
+          <p>Our team of expert agents is dedicated to providing exceptional service and finding the perfect property to match your lifestyle and preferences.</p>
+          <a href="/about.html" class="btn btn-secondary">Learn More</a>
+        </div>
+        <div class="about-image">
+          <img src="/images/luxury-mansion.jpeg" alt="Luxury Mansion">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="testimonials">
+    <div class="container">
+      <h2 class="section-title">What Our Clients Say</h2>
+      <div class="testimonial-slider">
+        <div class="testimonial">
+          <div class="testimonial-content">
+            <p>"LuxuryHomes helped me find my dream property. Their attention to detail and understanding of my needs made the process seamless and enjoyable."</p>
+          </div>
+          <div class="testimonial-author">
+            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Client">
+            <div>
+              <h4>John Smith</h4>
+              <p>New York, NY</p>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial">
+          <div class="testimonial-content">
+            <p>"The team at LuxuryHomes went above and beyond to ensure I found the perfect home. Their expertise and professionalism are unmatched."</p>
+          </div>
+          <div class="testimonial-author">
+            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Client">
+            <div>
+              <h4>Sarah Johnson</h4>
+              <p>Los Angeles, CA</p>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial">
+          <div class="testimonial-content">
+            <p>"I've worked with many real estate agencies, but LuxuryHomes stands out for their exceptional service and attention to detail."</p>
+          </div>
+          <div class="testimonial-author">
+            <img src="https://randomuser.me/api/portraits/men/67.jpg" alt="Client">
+            <div>
+              <h4>Michael Chen</h4>
+              <p>Miami, FL</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to Action -->
+  <section class="cta">
+    <div class="container">
+      <h2>Find Your Dream Home Today</h2>
+      <p>Let us help you discover the perfect property that matches your lifestyle and preferences.</p>
+      <div class="cta-buttons">
+        <a href="/properties.html" class="btn btn-primary">Browse Properties</a>
+        <a href="/contact.html" class="btn btn-secondary">Contact Us</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-container">
+        <div class="footer-column">
+          <h3>LuxuryHomes</h3>
+          <p>Your premier destination for luxury real estate worldwide. Find your dream property with our expert guidance.</p>
+        </div>
+        
+        <div class="footer-column">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/properties.html">Properties</a></li>
+            <li><a href="/about.html">About Us</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-column">
+          <h3>Contact Us</h3>
+          <ul>
+            <li><i class="fas fa-map-marker-alt"></i> 123 Luxury Lane, Beverly Hills</li>
+            <li><i class="fas fa-phone"></i> +1 (123) 456-7890</li>
+            <li><i class="fas fa-envelope"></i> info@luxuryhomes.com</li>
+          </ul>
+        </div>
+        
+        <div class="footer-column">
+          <h3>Follow Us</h3>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2025 LuxuryHomes | <a href="/privacy.html">Privacy Policy</a> | <a href="/terms.html">Terms of Service</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/main.js"></script>
+</body>
+</html> 
