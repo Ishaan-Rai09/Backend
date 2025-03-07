@@ -1,7 +1,6 @@
 const express = require('express');
 const router = express.Router();
 
-// Health check endpoint
 router.get('/health', (req, res) => {
   res.status(200).json({ 
     status: 'ok', 
@@ -10,13 +9,9 @@ router.get('/health', (req, res) => {
   });
 });
 
-// Properties endpoints
 router.get('/properties', (req, res) => {
   try {
-    // Get query parameters
     const { type, location, minPrice, maxPrice } = req.query;
-    
-    // Mock properties data
     const properties = [
       {
         id: 1,
@@ -34,7 +29,6 @@ router.get('/properties', (req, res) => {
       }
     ];
     
-    // Filter properties based on query parameters
     let filteredProperties = [...properties];
     
     if (type) {
@@ -69,8 +63,6 @@ router.get('/properties', (req, res) => {
 router.get('/properties/:id', (req, res) => {
   try {
     const { id } = req.params;
-    
-    // Mock property data
     const property = {
       id: parseInt(id),
       title: 'Luxury Villa',
@@ -109,12 +101,10 @@ router.get('/properties/:id', (req, res) => {
   }
 });
 
-// Contact form endpoint
 router.post('/contact', (req, res) => {
   try {
     const { name, email, message, subject, phone } = req.body;
     
-    // Validate request body
     if (!name || !email || !message) {
       return res.status(400).json({
         success: false,
@@ -122,7 +112,6 @@ router.post('/contact', (req, res) => {
       });
     }
     
-    // Mock saving contact message
     const contactMessage = {
       id: Date.now(),
       name,
@@ -148,4 +137,4 @@ router.post('/contact', (req, res) => {
   }
 });
 
-module.exports = router; 
+module.exports = router;
